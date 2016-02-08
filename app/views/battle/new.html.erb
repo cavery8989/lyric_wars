@@ -1,18 +1,37 @@
 
-
-<div class = "row">
-    
-    <div class="jumbotron">
-        <div class = "row">
-            <div class = " col-md-6 col-md-offset-4 center">
-                <h1>Lyric Wars!!!</h1>
-            </div>
-          
-         </div>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    <div class = "row">
+        
+        <%= form_tag "/battle" do %>
+        
+        <div class = "col-md-4 col-md-offset-2" style="text-align: center;">
+            <%= label_tag :song1_name,"Song 1 Name" %><br/>
+            <%= text_field_tag :song1_name %>
+            <hr/>
+            <%= label_tag :lyrics1 %><br/>
+            <%= text_area_tag :lyrics1, nil, size: "40x15" %>
+        </div>
+        <div class = "col-md-4" style="text-align: center";>
+            <%= label_tag :song2_name, "Song 2 Name" %><br/>
+            <%= text_field_tag :song2_name %>
+            <hr/>
+            <%= label_tag :lyrics2 %><br/>
+            <%= text_area_tag :lyrics2, nil, size: "40x15" %>
+        </div>
+        
     </div>
+        
+        <div class = "row">
+            <div class = "col-md 12" style="text-align: center;">
+                <br/>
+                <%= submit_tag 'Fight!', class: "btn btn-success" %>
+            </div>
+        </div>
+        
+        <% end %>
+        
+        
+        
+    
 
     
-</div>
 
